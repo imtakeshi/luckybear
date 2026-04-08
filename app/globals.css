@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+}
+
+/* Доступное скрытие: только для skip-link и вспомогательных подписей, не для набивки ключами */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus-skip:focus {
+  position: fixed;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  @apply rounded-lg bg-brand text-white shadow-lg;
+}
+
+.prose-local h2 {
+  @apply mt-10 text-2xl font-semibold text-ink scroll-mt-24;
+}
+
+.prose-local h3 {
+  @apply mt-6 text-xl font-semibold text-ink;
+}
+
+.prose-local p {
+  @apply mt-4 leading-relaxed text-ink/90;
+}
+
+.prose-local ul {
+  @apply mt-4 list-disc space-y-2 pl-5 text-ink/90;
+}
+
+.prose-local table {
+  @apply mt-4 w-full border-collapse text-sm;
+}
+
+.prose-local th,
+.prose-local td {
+  @apply border border-surface-accent px-3 py-2 text-left align-top;
+}
+
+.prose-local th {
+  @apply bg-surface-accent font-medium;
+}
