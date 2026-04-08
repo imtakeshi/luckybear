@@ -4,6 +4,7 @@ import "./globals.css";
 import { getSiteUrl } from "@/lib/affiliate";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { YandexMetrika } from "@/components/YandexMetrika";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-geist-sans" });
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <YandexMetrika />
       </body>
     </html>
   );
